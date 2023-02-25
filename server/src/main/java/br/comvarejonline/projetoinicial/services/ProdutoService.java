@@ -48,4 +48,11 @@ public class ProdutoService {
 		produto = repository.save(produtoBanco);
 		return produto;
 	}
+
+	@Transactional
+	public void deleteProduto(Long id) {
+		Optional<Produto> objeto = repository.findById(id);
+		if (objeto.isPresent())
+			repository.deleteById(id);
+	}
 }
