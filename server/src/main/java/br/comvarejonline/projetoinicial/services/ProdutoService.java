@@ -1,6 +1,7 @@
 package br.comvarejonline.projetoinicial.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,5 +19,13 @@ public class ProdutoService {
 	public List<Produto> findAll() {
 		List<Produto> produtos = repository.findAll();
 		return produtos;
+	}
+
+	@Transactional(readOnly = true)
+	public Produto findbyId(Long id) {
+		Optional<Produto> objeto = repository.findById(id);
+		if (objeto.isEmpty())
+			return null;
+		return objeto.get();
 	}
 }
