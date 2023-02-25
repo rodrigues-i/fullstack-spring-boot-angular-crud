@@ -1,0 +1,2 @@
+INSERT INTO tb_produtos(codigo_de_barras, nome, quantidade_minima, saldo_inicial) VALUES ('codigo-1', 'biscoito maria', 70, 8425.85);
+INSERT INTO tb_produtos(codigo_de_barras, nome, quantidade_minima, saldo_inicial) VALUES ('codigo-2', 'Fardo Coca Cola', 58, 15832.58);
