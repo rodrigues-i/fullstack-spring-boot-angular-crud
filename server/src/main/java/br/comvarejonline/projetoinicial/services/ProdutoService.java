@@ -22,10 +22,16 @@ public class ProdutoService {
 	}
 
 	@Transactional(readOnly = true)
-	public Produto findbyId(Long id) {
+	public Produto findById(Long id) {
 		Optional<Produto> objeto = repository.findById(id);
 		if (objeto.isEmpty())
 			return null;
 		return objeto.get();
+	}
+
+	@Transactional
+	public Produto createProduto(Produto produto) {
+		produto = repository.save(produto);
+		return produto;
 	}
 }
