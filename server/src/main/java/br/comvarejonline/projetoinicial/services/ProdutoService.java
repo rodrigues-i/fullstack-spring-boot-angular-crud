@@ -34,4 +34,18 @@ public class ProdutoService {
 		produto = repository.save(produto);
 		return produto;
 	}
+
+	@Transactional
+	public Produto updateProduto(Long id, Produto produto) {
+		Optional<Produto> objetoBanco = repository.findById(id);
+		if (objetoBanco.isEmpty())
+			return null;
+
+		Produto produtoBanco = objetoBanco.get();
+		produtoBanco.setCodigoDeBarras(produto.getCodigoDeBarras());
+		produtoBanco.setNome(produto.getNome());
+		produtoBanco.setQuantidadeMinima(produto.getQuantidadeMinima());
+		produto = repository.save(produtoBanco);
+		return produto;
+	}
 }
