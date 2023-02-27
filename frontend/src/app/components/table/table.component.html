@@ -1,0 +1,32 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="codigo">
+      <th mat-header-cell *matHeaderCellDef> Código de Barras </th>
+      <td mat-cell *matCellDef="let produto"> {{produto.codigoDeBarras}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let produto"> {{produto.nome}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="quantidadeMinima">
+      <th mat-header-cell *matHeaderCellDef> Quantidade Mínima </th>
+      <td mat-cell *matCellDef="let produto"> {{produto.quantidadeMinima}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="saldoInicial">
+      <th mat-header-cell *matHeaderCellDef> Saldo Inicial </th>
+      <td mat-cell *matCellDef="let produto"> {{produto.saldoInicial}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

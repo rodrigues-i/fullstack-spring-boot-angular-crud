@@ -9,6 +9,7 @@ import { ProdutoService } from 'src/app/services/produto.service';
 })
 export class ListProdutosComponent implements OnInit {
   produtos: Produto[] = [];
+  dataLoaded: boolean = false;
   constructor(private produtoService: ProdutoService) { }
 
   ngOnInit(): void {
@@ -17,7 +18,10 @@ export class ListProdutosComponent implements OnInit {
 
   listProdutos(): void {
     this.produtoService.getProdutos().subscribe(
-      data => this.produtos = data
+      data => {
+        this.produtos = data;
+        this.dataLoaded = true;
+      }
     );
   };
 }
