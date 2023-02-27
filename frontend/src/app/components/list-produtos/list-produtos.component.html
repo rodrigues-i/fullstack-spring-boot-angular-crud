@@ -1,4 +1,9 @@
 <div *ngIf="dataLoaded">
-    <h1>Produtos Cadastrados</h1>
-    <app-table [produtos]="produtos"></app-table>
+    <div class="header">
+        <h1>Produtos Cadastrados</h1>
+    </div>
+    <div class="teste">
+        <button>Adicionar Produto</button>
+        <app-table [produtos]="produtos"></app-table>
+    </div>
 </div>

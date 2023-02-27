@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { ListProdutosComponent } from './components/list-produtos/list-produtos.component';
 import { LoginComponent } from './components/login/login.component';
 import { TableComponent } from './components/table/table.component';
+import { AddProdutoComponent } from './components/add-produto/add-produto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListProdutosComponent,
     LoginComponent,
-    TableComponent
+    TableComponent,
+    AddProdutoComponent
   ],
   imports: [
     BrowserModule,
