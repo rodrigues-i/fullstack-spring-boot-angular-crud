@@ -3,10 +3,10 @@
         <h2>Editar Produto</h2>
     </div>
     <div class="form">
-        <form (ngSubmit)="editProduto()">
+        <form (ngSubmit)="updateProduto(produto)">
             <div>
                 <label for="nome">Id</label>
-                <input type="text" name="id" [(ngModel)]="produto.id">
+                <input type="text" name="id" [(ngModel)]="produto.id" readonly>
             </div>
             <div>
                 <label for="codigo">Código de Barras</label>
@@ -25,7 +25,7 @@
                 <input type="number" name="saldo" [(ngModel)]="produto.saldoInicial">
             </div>
             <div class="button">
-                <button>Adicionar</button>
+                <button>Atualizar</button>
                 <a routerLink="/produtos">Voltar</a>
             </div>
         </form>

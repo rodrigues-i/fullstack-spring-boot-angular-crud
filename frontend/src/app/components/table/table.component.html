@@ -3,30 +3,39 @@
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
   
-    <!-- Position Column -->
+    <!-- Codigo Column -->
     <ng-container matColumnDef="codigo">
       <th mat-header-cell *matHeaderCellDef> Código de Barras </th>
       <td mat-cell *matCellDef="let produto"> {{produto.codigoDeBarras}} </td>
     </ng-container>
   
-    <!-- Name Column -->
+    <!-- Nome Column -->
     <ng-container matColumnDef="nome">
       <th mat-header-cell *matHeaderCellDef> Nome </th>
       <td mat-cell *matCellDef="let produto"> {{produto.nome}} </td>
     </ng-container>
   
-    <!-- Weight Column -->
+    <!-- quantidadeMinima Column -->
     <ng-container matColumnDef="quantidadeMinima">
       <th mat-header-cell *matHeaderCellDef> Quantidade Mínima </th>
       <td mat-cell *matCellDef="let produto"> {{produto.quantidadeMinima}} </td>
     </ng-container>
   
-    <!-- Symbol Column -->
+    <!-- saldoInicial Column -->
     <ng-container matColumnDef="saldoInicial">
       <th mat-header-cell *matHeaderCellDef> Saldo Inicial </th>
       <td mat-cell *matCellDef="let produto"> {{produto.saldoInicial}} </td>
     </ng-container>
-  
+
+    <!-- Editar Column -->
+  <ng-container class="editar" matColumnDef="editar">
+    <th class="target-th" mat-header-cell *matHeaderCellDef> </th>
+    <td class="target-td" mat-cell *matCellDef="let produto">
+      <button class="btn-edit" (click)="edit(produto)">Editar</button>
+      <button class="btn-remove">Excluir</button>
+    </td>
+  </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
