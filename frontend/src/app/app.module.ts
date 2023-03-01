@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ListProdutosComponent } from './components/list-produtos/list-produtos.component';
@@ -24,7 +25,8 @@ import { AddProdutoComponent } from './components/add-produto/add-produto.compon
     AppRoutingModule,
     NoopAnimationsModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

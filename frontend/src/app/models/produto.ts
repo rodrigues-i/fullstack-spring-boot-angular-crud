@@ -1,7 +1,7 @@
 export class Produto {
-    private id: number;
-    private codigoDeBarras: string;
-    private nome: string;
-    private quantidadeMinima: number;
-    private saldoInicial: number;
+    id: number;
+    codigoDeBarras: string;
+    nome: string;
+    quantidadeMinima: number;
+    saldoInicial: number;
 }

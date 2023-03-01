@@ -16,4 +16,8 @@ export class ProdutoService {
       map(response => response)
     )
   };
+
+  postProduto(produto: Produto): Observable<Produto> {
+    return this.httpClient.post<Produto>(this.url, produto)
+  }
 }

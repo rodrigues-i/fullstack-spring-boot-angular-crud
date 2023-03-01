@@ -3,22 +3,22 @@
         <h2>Adicionar Novo Produto</h2>
     </div>
     <div class="form">
-        <form>
+        <form (ngSubmit)="saveProduto()">
             <div>
                 <label for="codigo">Código de Barras</label>
-                <input type="text" name="codifo">
+                <input type="text" name="codigo" [(ngModel)]="produto.codigoDeBarras">
             </div>
             <div>
                 <label for="nome">Nome</label>
-                <input type="text" name="nome">
+                <input type="text" name="nome" [(ngModel)]="produto.nome">
             </div>
             <div>
                 <label for="quantidade">Quantidade Mínima</label>
-                <input type="number" name="quantidade">
+                <input type="number" name="quantidade" [(ngModel)]="produto.quantidadeMinima">
             </div>
             <div>
                 <label for="saldo">Saldo Inicial</label>
-                <input type="number" name="saldo">
+                <input type="number" name="saldo" [(ngModel)]="produto.saldoInicial">
             </div>
             <div class="button">
                 <button>Adicionar</button>
