@@ -19,7 +19,9 @@ export class AddProdutoComponent implements OnInit {
 
   saveProduto(): void {
     this.produtoService.postProduto(this.produto).subscribe();
-    this.router.navigateByUrl("/produtos");
+    this.router.navigateByUrl("/produtos").then(() => {
+      window.location.reload();
+    });
 
   }
 }

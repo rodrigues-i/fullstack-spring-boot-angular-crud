@@ -14,18 +14,22 @@ export class ProdutoService {
   getProdutos(): Observable<Produto[]> {
     return this.httpClient.get<Produto[]>(this.url).pipe(
       map(response => response)
-    )
+    );
   };
 
   postProduto(produto: Produto): Observable<Produto> {
-    return this.httpClient.post<Produto>(this.url, produto)
-  }
+    return this.httpClient.post<Produto>(this.url, produto);
+  };
 
   getProduto(id: number): Observable<Produto> {
     return this.httpClient.get<Produto>(this.url + "/" + id);
-  }
+  };
 
   updateProduto(produto: Produto): Observable<Produto> {
     return this.httpClient.put<Produto>(this.url + "/" + produto.id, produto);
+  };
+
+  deleteProduto(id: number): Observable<Produto> {
+    return this.httpClient.delete<Produto>(this.url + "/" + id);
   }
 }
