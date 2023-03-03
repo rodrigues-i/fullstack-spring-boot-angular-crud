@@ -28,4 +28,10 @@ public class MovimentacaoService {
 				.orElseThrow(() -> new ResourceNotFoundException("Movimentação com id " + id + " não encontrada"));
 		return entity;
 	}
+	
+	@Transactional
+	public Movimentacao create(Movimentacao movimentacao) {
+		movimentacao = repository.save(movimentacao);
+		return movimentacao;
+	}
 }
