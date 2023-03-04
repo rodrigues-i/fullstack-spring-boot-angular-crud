@@ -28,10 +28,25 @@ public class MovimentacaoService {
 				.orElseThrow(() -> new ResourceNotFoundException("Movimentação com id " + id + " não encontrada"));
 		return entity;
 	}
-	
+
 	@Transactional
 	public Movimentacao create(Movimentacao movimentacao) {
 		movimentacao = repository.save(movimentacao);
+		return movimentacao;
+	}
+
+	@Transactional
+	public Movimentacao update(Long id, Movimentacao movimentacao) {
+		Optional<Movimentacao> obj = repository.findById(id);
+		Movimentacao movimentacaoDb = obj
+				.orElseThrow(() -> new ResourceNotFoundException("Movimentação com id " + id + " não encontrada"));
+		movimentacaoDb.setData(movimentacao.getData());
+		movimentacaoDb.setDocumento(movimentacao.getDocumento());
+		movimentacaoDb.setMotivo(movimentacao.getMotivo());
+		movimentacaoDb.setProduto(movimentacao.getProduto());
+		movimentacaoDb.setQuantidade(movimentacao.getQuantidade());
+		movimentacaoDb.setTipo(movimentacao.getTipo());
+		movimentacao = repository.save(movimentacaoDb);
 		return movimentacao;
 	}
 }

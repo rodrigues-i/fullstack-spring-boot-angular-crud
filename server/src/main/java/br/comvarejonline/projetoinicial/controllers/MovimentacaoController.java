@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,11 +34,17 @@ public class MovimentacaoController {
 		Movimentacao movimentacao = service.findById(id);
 		return ResponseEntity.ok().body(movimentacao);
 	}
-	
+
 	@PostMapping
 	public ResponseEntity<Movimentacao> post(@RequestBody Movimentacao movimentacao) {
 		movimentacao = service.create(movimentacao);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").build().toUri();
 		return ResponseEntity.created(uri).body(movimentacao);
+	}
+
+	@PutMapping(value = "{id}")
+	public ResponseEntity<Movimentacao> put(@PathVariable Long id, @RequestBody Movimentacao movimentacao) {
+		movimentacao = service.update(id, movimentacao);
+		return ResponseEntity.ok().body(movimentacao);
 	}
 }
