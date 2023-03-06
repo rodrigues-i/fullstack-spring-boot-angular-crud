@@ -12,6 +12,7 @@ import { LoginComponent } from './components/login/login.component';
 import { TableComponent } from './components/table/table.component';
 import { AddProdutoComponent } from './components/add-produto/add-produto.component';
 import { EditProdutoComponent } from './components/edit-produto/edit-produto.component';
+import { MovimentacoesComponent } from './components/movimentacoes/movimentacoes.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EditProdutoComponent } from './components/edit-produto/edit-produto.com
     LoginComponent,
     TableComponent,
     AddProdutoComponent,
-    EditProdutoComponent
+    EditProdutoComponent,
+    MovimentacoesComponent
   ],
   imports: [
     BrowserModule,
