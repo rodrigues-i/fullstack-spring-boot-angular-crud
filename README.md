@@ -1,4 +1,4 @@
-# Varejo Online
+# Crud de produtos com spring boot e angular
 
 ## Tecnologias usadas
 - Angular 9
