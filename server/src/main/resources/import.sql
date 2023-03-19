@@ -9,14 +9,3 @@ INSERT INTO tb_produtos (codigo_de_barras, nome, quantidade_minima, saldo_inicia
 INSERT INTO tb_produtos (codigo_de_barras, nome, quantidade_minima, saldo_inicial) VALUES ('9012345678901', 'Produto I', 18, 300.00);
 INSERT INTO tb_produtos (codigo_de_barras, nome, quantidade_minima, saldo_inicial) VALUES ('0123456789012', 'Produto J', 7, 80.00);
 
-
-INSERT INTO tb_movimentacoes (tipo, quantidade, data, motivo, documento, produto_id) VALUES ('ENTRADA', 10, NOW(), 'New stock', 'DOC-123456', 1);
-INSERT INTO tb_movimentacoes (tipo, quantidade, data, motivo, documento, produto_id) VALUES ('SAIDA', 5, NOW(), 'Sales', 'DOC-789012', 1);
-INSERT INTO tb_movimentacoes (tipo, quantidade, data, motivo, documento, produto_id) VALUES ('ENTRADA', 20, NOW(), 'New stock', 'DOC-345678', 2);
-INSERT INTO tb_movimentacoes (tipo, quantidade, data, motivo, documento, produto_id) VALUES ('SAIDA', 10, NOW(), 'Sales', 'DOC-901234', 2);
-INSERT INTO tb_movimentacoes (tipo, quantidade, data, motivo, documento, produto_id) VALUES ('ENTRADA', 15, NOW(), 'New stock', 'DOC-567890', 3);
-INSERT INTO tb_movimentacoes (tipo, quantidade, data, motivo, documento, produto_id) VALUES ('SAIDA', 5, NOW(), 'Sales', 'DOC-123456', 3);
-INSERT INTO tb_movimentacoes (tipo, quantidade, data, motivo, documento, produto_id) VALUES ('ENTRADA', 30, NOW(), 'New stock', 'DOC-789012', 4);
-INSERT INTO tb_movimentacoes (tipo, quantidade, data, motivo, documento, produto_id) VALUES ('SAIDA', 20, NOW(), 'Sales', 'DOC-345678', 4);
-INSERT INTO tb_movimentacoes (tipo, quantidade, data, motivo, documento, produto_id) VALUES ('ENTRADA', 25, NOW(), 'New stock', 'DOC-901234', 5);
-INSERT INTO tb_movimentacoes (tipo, quantidade, data, motivo, documento, produto_id) VALUES ('SAIDA', 10, NOW(), 'Sales', 'DOC-567890', 5);
