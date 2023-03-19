@@ -12,7 +12,6 @@ import { LoginComponent } from './components/login/login.component';
 import { TableComponent } from './components/table/table.component';
 import { AddProdutoComponent } from './components/add-produto/add-produto.component';
 import { EditProdutoComponent } from './components/edit-produto/edit-produto.component';
-import { MovimentacoesComponent } from './components/movimentacoes/movimentacoes.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { MovimentacoesComponent } from './components/movimentacoes/movimentacoes
     LoginComponent,
     TableComponent,
     AddProdutoComponent,
-    EditProdutoComponent,
-    MovimentacoesComponent
+    EditProdutoComponent
   ],
   imports: [
     BrowserModule,
